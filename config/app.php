@@ -123,4 +123,14 @@ return [
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
 
+    /*
+    |--------------------------------------------------------------------------
+    | Email Notifications
+    |--------------------------------------------------------------------------
+    |
+    */
+    'booking_email_notification' => env('BOOKING_EMAIL_NOTIFICATION', false),
+    'event_updated_email_notification' => env('EVENT_UPDATED_EMAIL_NOTIFICATION', false),
+
+
 ];

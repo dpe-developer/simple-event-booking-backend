@@ -20,9 +20,9 @@ class BookingController extends Controller
         $this->bookingService = $bookingService;
     }
 
-    public function book(Event $event, Request $request): JsonResponse
+    public function book(Event $event, Request $request)
     {
-        if ($event->bookings()->count() >= $event->capacity) {
+        /* if ($event->bookings()->count() >= $event->capacity) {
             return response()->json(['error' => 'Event is fully booked'], 400);
         }
 
@@ -31,7 +31,9 @@ class BookingController extends Controller
             'event_id' => $event->id
         ]);
 
-        return response()->json(['message' => 'Booking successful', 'booking' => $booking], 201);
+        return response()->json(['message' => 'Booking successful', 'booking' => $booking], 201); */
+
+        return $this->bookingService->bookEvent($event);
     }
 
     public function userBookings(Request $request)
