@@ -34,6 +34,7 @@ This approach ensures a structured and maintainable development process.
 - Event creation and management
 - User registration and authentication
 - Booking system for events
+- Booking notifications via email
 - RESTful API endpoints
 
 ## Requirements
@@ -58,7 +59,7 @@ This approach ensures a structured and maintainable development process.
 4. Configure the `.env` file with your database credentials.
 5. Run database migrations:
   ```bash
-  php artisan migrate
+  php artisan migrate --seed
   ```
 
 ## Usage
